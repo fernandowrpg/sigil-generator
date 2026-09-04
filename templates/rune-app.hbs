@@ -1,0 +1,41 @@
+<div class="sigil-generator">
+
+  <div class="runa-preview">{{{svg}}}</div>
+
+  <div class="form-group">
+    <label>{{localize "RUNABUILDER.Seed"}}</label>
+    <div class="form-fields seed-row">
+      <input type="number" name="seed" value="{{seed}}">
+      <button type="button" data-action="applySeed">{{localize "RUNABUILDER.Apply"}}</button>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "RUNABUILDER.Name"}}</label>
+    <input type="text" name="name" value="{{name}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "RUNABUILDER.Power"}}</label>
+    <input type="text" name="power" value="{{power}}">
+  </div>
+
+  <div class="form-group">
+    <label>{{localize "RUNABUILDER.Description"}}</label>
+    <textarea name="description" rows="3">{{description}}</textarea>
+  </div>
+
+  <footer class="sheet-footer">
+    <button type="button" data-action="regenerate">
+      <i class="fa-solid fa-dice"></i> {{localize "RUNABUILDER.Regenerate"}}
+    </button>
+    <button type="button" data-action="create" {{#unless isGM}}disabled{{/unless}}>
+      <i class="fa-solid fa-box-archive"></i> {{localize "RUNABUILDER.CreateAndPlace"}}
+    </button>
+  </footer>
+
+  {{#unless isGM}}
+    <p class="hint gm-only-hint">{{localize "RUNABUILDER.OnlyGM"}}</p>
+  {{/unless}}
+
+</div>

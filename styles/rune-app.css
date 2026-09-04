@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Crimson+Text:ital@0;1&display=swap");
+
+#sigil-generator-app .window-content {
+  background: #ece3cc;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(0, 0, 0, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(0, 0, 0, 0.06), transparent 45%);
+  color: #2b2620;
+  font-family: "Crimson Text", "Signika", serif;
+}
+
+#sigil-generator-app .window-header {
+  font-family: "Cinzel", serif;
+}
+
+.sigil-generator {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.25rem 0.1rem 0.1rem;
+}
+
+.sigil-generator .runa-preview {
+  align-self: center;
+  width: 190px;
+  height: 190px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #f5efdd;
+  box-shadow: inset 0 0 0 1px #a9822c, inset 0 0 14px rgba(90, 32, 32, 0.15), 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.sigil-generator .runa-preview svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sigil-generator .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.sigil-generator .form-group label {
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: #5a2020;
+}
+
+.sigil-generator input[type="text"],
+.sigil-generator input[type="number"],
+.sigil-generator textarea {
+  background: #fbf7ea;
+  border: 1px solid #a9822c;
+  border-radius: 3px;
+  color: #2b2620;
+  padding: 0.3rem 0.45rem;
+  font-family: "Crimson Text", serif;
+  font-size: 0.95rem;
+}
+
+.sigil-generator textarea {
+  resize: vertical;
+}
+
+.sigil-generator .seed-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.sigil-generator .seed-row input {
+  flex: 1;
+}
+
+.sigil-generator .sheet-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.sigil-generator button {
+  font-family: "Cinzel", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  background: #3a2f22;
+  color: #ecdfb8;
+  border: 1px solid #a9822c;
+  border-radius: 3px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.sigil-generator button:hover:not(:disabled) {
+  background: #5a2020;
+  border-color: #d9b25a;
+}
+
+.sigil-generator button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sigil-generator .hint {
+  font-size: 0.78rem;
+  color: #5a2020;
+  text-align: center;
+  margin: 0;
+}

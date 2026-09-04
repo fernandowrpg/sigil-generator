@@ -1,0 +1,15 @@
+{
+  "RUNABUILDER.Title": "Construtor de Runas",
+  "RUNABUILDER.OpenApp": "Construtor de Runas",
+  "RUNABUILDER.Seed": "Semente",
+  "RUNABUILDER.Apply": "Aplicar",
+  "RUNABUILDER.Name": "Nome",
+  "RUNABUILDER.Power": "Poder",
+  "RUNABUILDER.Description": "Descrição",
+  "RUNABUILDER.Regenerate": "Gerar outra",
+  "RUNABUILDER.CreateAndPlace": "Criar diário e colocar baú no mapa",
+  "RUNABUILDER.OnlyGM": "Apenas o Mestre pode usar o Construtor de Runas.",
+  "RUNABUILDER.Error": "Não foi possível criar a runa. Veja o console (F12) para detalhes.",
+  "RUNABUILDER.CreatedWithChest": "Runa \"{name}\" criada! O diário e o baú foram colocados na cena atual.",
+  "RUNABUILDER.CreatedNoScene": "Runa \"{name}\" criada, mas nenhuma cena ativa foi encontrada — o diário foi salvo, mas o baú não foi colocado no mapa."
+}

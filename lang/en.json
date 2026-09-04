@@ -1,0 +1,15 @@
+{
+  "RUNABUILDER.Title": "Rune Builder",
+  "RUNABUILDER.OpenApp": "Rune Builder",
+  "RUNABUILDER.Seed": "Seed",
+  "RUNABUILDER.Apply": "Apply",
+  "RUNABUILDER.Name": "Name",
+  "RUNABUILDER.Power": "Power",
+  "RUNABUILDER.Description": "Description",
+  "RUNABUILDER.Regenerate": "Generate another",
+  "RUNABUILDER.CreateAndPlace": "Create journal and place chest on map",
+  "RUNABUILDER.OnlyGM": "Only the GM can use the Rune Builder.",
+  "RUNABUILDER.Error": "Could not create the rune. Check the console (F12) for details.",
+  "RUNABUILDER.CreatedWithChest": "Rune \"{name}\" created! The journal entry and chest were placed on the current scene.",
+  "RUNABUILDER.CreatedNoScene": "Rune \"{name}\" created, but no active scene was found — the journal was saved, but the chest wasn't placed on the map."
+}
