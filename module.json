@@ -2,13 +2,16 @@
   "id": "sigil-generator",
   "title": "Sigil Generator",
   "description": "Gerador procedural de runas/sigilos (inspirado no Sigil Generator do Watabou). Cada runa gerada pode virar automaticamente uma Entrada de Diário e um baú (marcador) colocado no mapa da cena ativa.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351"
   },
   "authors": [
-    { "name": "fernandowrpg", "url": "https://github.com/fernandowrpg" }
+    {
+      "name": "fernandowrpg",
+      "url": "https://github.com/fernandowrpg"
+    }
   ],
   "esmodules": [
     "scripts/main.js"
@@ -17,8 +20,16 @@
     "styles/rune-app.css"
   ],
   "languages": [
-    { "lang": "pt-BR", "name": "Português (Brasil)", "path": "lang/pt-BR.json" },
-    { "lang": "en", "name": "English", "path": "lang/en.json" }
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ],
   "socket": false,
   "url": "https://github.com/fernandowrpg/sigil-generator",

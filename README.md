@@ -7,6 +7,7 @@ Watabou](https://watabou.itch.io/sigil-generator) — e permite:
 1. Gerar uma runa aleatória (com semente reprodutível) e ajustar nome/poder/descrição.
 2. Criar uma **Entrada de Diário** com a imagem da runa e o texto gerado.
 3. Colocar automaticamente um **baú** no mapa da cena ativa, já vinculado a esse diário.
+4. Criar um **Item** com a imagem da runa, ligado ao diário, que pode ir para o inventário de um jogador.
 
 ## Instalação
 
@@ -39,8 +40,16 @@ Watabou](https://watabou.itch.io/sigil-generator) — e permite:
   - Campo **Semente**: digite um número e clique **Aplicar** para
     recriar exatamente a mesma runa depois.
   - Edite **Nome**, **Poder** e **Descrição** livremente antes de criar.
+  - **Item da runa**: marque *Criar item para o inventário*, escolha o
+    **tipo do item** (a lista vem do sistema do seu mundo) e, se quiser,
+    **Entregar para** um personagem de jogador — o item já cai no
+    inventário dele. Sem escolher ninguém, o item fica no diretório de
+    Itens para você arrastar até a ficha do personagem.
+  - **Permitir que os jogadores vejam o diário e o item**: dá permissão de
+    Observador (senão os jogadores não conseguem abrir o diário da runa).
   - **Criar diário e colocar baú no mapa**: gera o PNG da runa, cria a
-    Entrada de Diário e coloca o baú no centro da visão atual da cena.
+    Entrada de Diário (e o Item, se marcado) e coloca o baú no centro da
+    visão atual da cena.
 
 Apenas o **Mestre** vê o botão nos controles e pode usar o gerador.
 
@@ -52,6 +61,32 @@ Apenas o **Mestre** vê o botão nos controles e pode usar o gerador.
 - Baú no mapa: um marcador de **Anotação** (Note) com ícone de baú,
   no centro da tela no momento da criação — arraste-o para onde quiser
   depois. Clicar duas vezes no baú abre a Entrada de Diário vinculada.
+
+## Criar o item de uma runa que já existe
+
+Para runas geradas antes (ou em qualquer momento depois), sem precisar
+gerar de novo:
+
+- Abra o diário da runa — o cabeçalho da janela ganha o botão **Criar item da runa**; **ou**
+- No Diretório de Diários, clique com o botão direito no diário da
+  runa → **Criar item da runa**; **ou**
+- Por macro: `game.modules.get("sigil-generator").api.createItemFromJournal("<id do diário>")`.
+
+Uma janelinha pergunta o tipo do item, para quem entregar e se os
+jogadores podem ver o diário. A imagem, o poder e a descrição são
+lidos do próprio diário. O botão só aparece em diários criados por este
+módulo (reconhecidos pela imagem `runa-<semente>.png`).
+
+## Como o item se liga ao diário
+
+- O item guarda o link do diário na descrição (`@UUID[...]`) — o módulo
+  preenche o campo de descrição que o sistema usar (`system.description`
+  ou `system.description.value`). Se o seu sistema usar outro campo, o
+  texto não aparece na descrição, mas o vínculo continua funcionando:
+- Toda ficha de item de runa ganha um botão **Abrir runa** (ícone de
+  chapéu de mago) no cabeçalho, que abre o diário. Isso funciona mesmo
+  depois de o item ser copiado para o inventário de um personagem.
+- O diário também traz de volta um link para o item.
 
 ## Por que uma Anotação e não um "item container" de verdade?
 

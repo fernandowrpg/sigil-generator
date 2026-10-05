@@ -25,6 +25,43 @@
     <textarea name="description" rows="3">{{description}}</textarea>
   </div>
 
+  <fieldset class="item-options">
+    <legend>{{localize "RUNABUILDER.ItemSection"}}</legend>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="createItem" {{#if createItem}}checked{{/if}} {{#unless hasItemTypes}}disabled{{/unless}}>
+      <span>{{localize "RUNABUILDER.CreateItem"}}</span>
+    </label>
+
+    {{#if hasItemTypes}}
+    <div class="form-group">
+      <label>{{localize "RUNABUILDER.ItemType"}}</label>
+      <select name="itemType">
+        {{#each itemTypes}}
+        <option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>{{localize "RUNABUILDER.GiveTo"}}</label>
+      <select name="actorId">
+        <option value="">{{localize "RUNABUILDER.GiveToNone"}}</option>
+        {{#each actors}}
+        <option value="{{id}}" {{#if selected}}selected{{/if}}>{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    {{else}}
+    <p class="hint">{{localize "RUNABUILDER.ItemNoTypes"}}</p>
+    {{/if}}
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="reveal" {{#if reveal}}checked{{/if}}>
+      <span>{{localize "RUNABUILDER.RevealJournal"}}</span>
+    </label>
+  </fieldset>
+
   <footer class="sheet-footer">
     <button type="button" data-action="regenerate">
       <i class="fa-solid fa-dice"></i> {{localize "RUNABUILDER.Regenerate"}}

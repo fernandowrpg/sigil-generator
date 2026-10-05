@@ -109,3 +109,37 @@
   text-align: center;
   margin: 0;
 }
+
+.sigil-generator .item-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #a9822c;
+  border-radius: 3px;
+  padding: 0.5rem 0.65rem 0.6rem;
+  margin: 0;
+}
+
+.sigil-generator .item-options legend {
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  color: #5a2020;
+  padding: 0 0.3rem;
+}
+
+.sigil-generator .checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.sigil-generator select {
+  background: #fbf7ea;
+  border: 1px solid #a9822c;
+  border-radius: 3px;
+  color: #2b2620;
+  padding: 0.25rem 0.4rem;
+  font-family: "Crimson Text", serif;
+  font-size: 0.95rem;
+}
